@@ -14,6 +14,7 @@ Articles live in [`docs/`](docs/); images for each article live in [`imgs/`](img
 | [Silk Through the Ages](docs/260620-silk-chn.md) | Silk as a cipher of civilization on a thread — a silk history from archaeology to the loom, told through the lens of *Dream of the Red Chamber* |
 | [The Rhapsody of the Luo River](docs/260629-luoshenfu-literary-analysis.md) | A literary appreciation of Cao Zhi's masterpiece — Wei-Jin aesthetics, the "ideal woman" archetype, and its dialogue with *Dream of the Red Chamber* and Chan Buddhism |
 | [Who Is Zhiyanzhai?](docs/260723-whoszhiyanzhai.md) | Three centuries of mystery around *Dream of the Red Chamber*'s anonymous commentator: five identity hypotheses and the redology debate |
+| [Corrections by Citation](docs/260808-corrections-by-citation.md) | A fact-checking record for the four articles above: every confirmed fix and every flagged item, each with its citations |
 
 ---
 
@@ -25,3 +26,4 @@ Articles live in [`docs/`](docs/); images for each article live in [`imgs/`](img
 | [绫罗绸缎](docs/260620-silk-chn.md) | 绫罗绸缎：丝线上的文明密码——从考古到织机的丝绸史话，借《红楼梦》视角展开 |
 | [洛神赋赏析](docs/260629-luoshenfu-literary-analysis.md) | 《洛神赋》文学赏析——曹植杰作、魏晋美学、"理想女性"范式，及其与《红楼梦》和禅宗的对话 |
 | [脂砚斋是谁](docs/260723-whoszhiyanzhai.md) | 脂砚斋是谁——《红楼梦》匿名评点者三百年的谜团：五大身份假说与红学之争 |
+| [校勘与引证说明](docs/260808-corrections-by-citation.md) | 以引证为准的校勘记录——上面四篇文章的全部已修正项与待核实项，逐条附来源依据 |
