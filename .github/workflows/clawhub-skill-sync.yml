@@ -19,7 +19,7 @@ jobs:
       id-token: write
     uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v0.23.3
     with:
-      root: .opencode/skills
+      skill_path: .opencode/skills/zh-history-literature-culture
       dry_run: true
 
   publish:
@@ -29,7 +29,7 @@ jobs:
       id-token: write
     uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v0.23.3
     with:
-      root: .opencode/skills
+      skill_path: .opencode/skills/zh-history-literature-culture
       dry_run: false
     secrets:
       clawhub_token: ${{ secrets.clawhub_token }}
