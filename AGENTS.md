@@ -6,8 +6,8 @@ Bilingual (English · 中文) repository of historical and literary articles —
 
 ## Working rules
 
-- **Get approval before any change.** Present the plan and wait for the user's explicit go-ahead before editing files, generating output, or running state-changing commands. If anything is unclear, ask rather than assume.
-- **Commit only when asked.** Never commit, amend, or push unless the user explicitly requests it. When committing, stage only intended files.
+The universal working rules (approval before changes, commit only when asked, honesty, ground truth, rollback, brand conventions) are defined in the global `~/.config/opencode/AGENTS.md` and apply here too. This file adds only what is specific to this repo.
+
 - **Verify facts before publishing.** Historical and literary claims in articles must be cross-checked against at least two independent, reliable sources before being treated as fact. Trusted sources: primary-text archives (e.g. Wikisource), official academic institutions (e.g. the Chinese Academy of Social Sciences' kaogu.cn and cssn.cn), academic presses (e.g. Zhonghua Book Company), and Wikipedia entries that carry references. Not counted: Weibo, WeChat, Toutiao, Douyin/TikTok, and personal blogs. Anything that cannot be verified is NOT asserted in the article. Unverifiable or contradictory items go into a batch corrections doc (`docs/YYMMDD-corrections-by-citation.md`) under "待核实" instead of being asserted in the article. The corrections doc is created only when there is something to record; if every claim verifies, no doc is needed. See `docs/260808-corrections-by-citation.md` for the working example.
 
 ## Filename conventions
@@ -30,4 +30,4 @@ Every file in `docs/` and `imgs/` follows a `YYMMDD-slug` pattern: a 6-digit dat
 - Articles reference images with a relative path (`../imgs/<file>`); keep `docs/` and `imgs/` as sibling directories so those links stay valid.
 - Chinese articles use Simplified Chinese by default; Traditional Chinese only when the article was originally written that way.
 - **Prose wrapping.** Prose auto-wraps; there is no hard-wrap requirement. Write each paragraph as a single line and let the renderer wrap it. Never split a CJK word across a line break. List items, code spans, and headings keep their own structure.
-- This directory is part of the parent `negtivSpace` repo (no separate git history). Do not create a nested `.git` here.
+- This directory is a separate git repository (a submodule of the parent `negtivSpace` repo) with two remotes on `main`: `j3ffyang` and `negtivspace` — push to both, then commit the updated submodule pointer in the parent.
