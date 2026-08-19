@@ -6,13 +6,14 @@ description: >
   Red Chamber, 洛神赋, 脂砚斋, etc.). Use when the user shares their own
   outline, notes, or stream-of-thought for a 中文历史/文学/文化 article and
   wants the agent to follow that thought-flow (must), expand with web
-  research, and produce a polished, well-cited draft. Covers creation,
-  polishing, fact-checking, and source selection.
+  research,   and produce a polished, well-cited draft. Output is in Chinese
+  (simplified by default); source material may be in any language. Covers
+  creation, polishing, fact-checking, and source selection.
 ---
 
 # 中文历史·文学·文化写作 (Chinese History / Literature / Culture Writing)
 
-Write, polish, and cite Chinese articles about Chinese history, literature, and culture. The user supplies the thinking; you supply the structure-faithful expansion, web research, and citations.
+Write, polish, and cite Chinese articles about Chinese history, literature, and culture. The user supplies the thinking; you supply the structure-faithful expansion, web research, and citations. Output is in Chinese (simplified by default); source material may be in any language.
 
 This skill complements `astro-sync` (publishing). Writing happens here; publishing happens there.
 
@@ -59,7 +60,8 @@ For each claim that needs support (dates, events, attributions, quotations, chap
 4. **Search the web** for each fact independently. Prefer site-restricted queries against trusted domains, e.g. `site:zh.wikisource.org 洛神赋` or `kaogu.cn 钱山漾 年代`.
 5. **Cross-check with at least two independent, reliable sources.** When the sources disagree, record the discrepancy in the corrections doc rather than silently picking a side.
 6. **Prefer primary text over commentary.** For classical works (洛神赋, 红楼梦, 旧五代史, 人间词话, 诗经, 全宋词…), quote from the primary text where possible (Wikisource scans/editions, 中华书局点校本), and verify the exact wording and chapter (回目) number. When a fact appears in both a primary text and a secondary commentary, cite the primary text; the commentary may be wrong or derivative.
-7. For literature, verify **chapter attributions against the original text**, not memory: e.g. 刘姥姥一进荣国府=第六回, 元妃省亲=第十八回, 葬花吟=第二十七回, 黛玉焚稿=第九十七回.
+7. For literature, verify **chapter attributions against the original text**, not memory: e.g. for《红楼梦》刘姥姥一进荣国府=第六回, 元妃省亲=第十八回; for《诗经》check poem titles against《毛诗正义》; for五代史料 verify episode numbers against《旧五代史》or《新五代史》.
+7a. **Know when one source suffices.** Well-established facts in primary texts (e.g. a poem's exact wording in Wikisource, a chapter number in《红楼梦》) need only one verified source. Reserve the ≥2-source requirement for contested claims, interpretive assertions, and historical attributions.
 
 ### Phase 3 — Source verification (verify the truth)
 
@@ -73,26 +75,28 @@ A trusted domain is not proof. The claim must be **actually present in the sourc
 ### Phase 4 — Write / polish
 
 12. Write in Simplified Chinese by default (Traditional only if the source or user's draft is Traditional). Follow the user's section order and emphasis. Expand their points with researched detail; mark each fact-supported sentence with a citation marker.
-13. Use precise terminology with first-use glosses where helpful (e.g. 包衣 = 内务府奴仆/皇室世仆, 软烟罗 vs 蝉翼纱). Annotate uncommon characters with pinyin on first use using `字（pinyin）` format — e.g. 杕杜（dì dù）、蝃蝀（dì dōng）、隮（jī）、淇（qí）、滺滺（yōu yōu）、桧（guì）、睆（huàn）、菅（jiān）、澌（sī）、钏（chuàn）. Do not annotate common characters or characters already widely known to the target audience.
-14. Cite properly:
+13. **Remove duplication.** Each fact should appear only once per entry. After writing a section, read it end-to-end and cut any sentence that restates information already present — whether in a biographical one-liner, an analysis paragraph, the introduction, or the conclusion. Common patterns: biographical context repeating the analysis paragraph, the结语 echoing the introduction, or two paragraphs in the same entry making the same point with different words.
+14. Use precise terminology with first-use glosses where helpful (e.g. 包衣 = 内务府奴仆/皇室世仆, 软烟罗 vs 蝉翼纱). Annotate uncommon characters with pinyin on first use using `字（pinyin）` format — e.g. 杕杜（dì dù）、蝃蝀（dì dōng）、隮（jī）、淇（qí）、滺滺（yōu yōu）、桧（guì）、睆（huàn）、菅（jiān）、澌（sī）、钏（chuàn）. Do not annotate common characters or characters already widely known to the target audience.
+15. **Maintain structural consistency.** All entries in a list-style article should use the same heading level (e.g. all `##`). Do not use labels that imply hierarchy (附录, 补充) unless the user explicitly requests them. If the article has a conclusion (结语), place it at the very end — never in the middle. The introduction should not announce a two-tier structure (main body + appendix) unless the user's thought-flow explicitly designs one.
+16. Cite properly:
     - Inline footnote-style markers `[¹]`, `[²]`… with a **引用来源** / **参考文献** list at the end (author, title, edition/publisher, year; for Wikisource, the text + edition note; for web, site + title + access date).
     - For text you quote verbatim, quote exactly (including chapter/回目), and give the source immediately.
     - Include an access date (今日日期) for web sources.
 
 ### Phase 5 — Corrections doc (conditional)
 
-15. Quality control is the goal; the corrections doc is only the evidence. If every claim verifies against ≥2 independent sources, **no corrections doc is created** — do not manufacture one to "complete" the workflow.
-16. Anything you could not verify, or that contradicts reliable sources, goes into `docs/YYMMDD-corrections-by-citation.md` (reuse today's date if none exists). Structure per the example `docs/260808-corrections-by-citation.md`: 校核总表 (table), 已修正逐条明细 (with 依据), 待核实清单, 引用来源清单.
-17. If the article already has a corrections doc, append to it rather than creating a duplicate.
+17. Quality control is the goal; the corrections doc is only the evidence. If every claim verifies against ≥2 independent sources, **no corrections doc is created** — do not manufacture one to "complete" the workflow.
+18. Anything you could not verify, or that contradicts reliable sources, goes into `docs/YYMMDD-corrections-by-citation.md` (reuse today's date if none exists). Structure per the example `docs/260808-corrections-by-citation.md`: 校核总表 (table), 已修正逐条明细 (with 依据), 待核实清单, 引用来源清单.
+19. If the article already has a corrections doc, append to it rather than creating a duplicate.
 
 ### Phase 6 — Post-writing citation audit
 
 After the article is complete, verify every citation and quoted reference:
 
-18. **Search each quoted sentence on the web.** Take every verbatim quote (classical poetry, historical texts, primary sources) and search it in full or by its distinctive clause. Confirm it surfaces in the primary text or independently-verifiable sources.
-19. **Verify exact wording.** Classical texts often have variant editions. Confirm the quote matches the edition you cite (e.g. 中华书局点校本 vs. Wikisource). If the user's source uses a different reading, note the variant rather than silently "correcting" it.
-20. **Check attribution accuracy.** Confirm the quoted line actually comes from the work you attribute it to (author, title, chapter/回目). Misattribution is common — verify against the primary text, not secondary commentary.
-21. **Apply corrections.** If any citation is inaccurate (wrong character, wrong source, wrong attribution), fix the article and record the change in the corrections doc per Phase 5.
+20. **Search each quoted sentence on the web.** Take every verbatim quote (classical poetry, historical texts, primary sources) and search it in full or by its distinctive clause. Confirm it surfaces in the primary text or independently-verifiable sources.
+21. **Verify exact wording.** Classical texts often have variant editions. Confirm the quote matches the edition you cite (e.g. 中华书局点校本 vs. Wikisource). If the user's source uses a different reading, note the variant rather than silently "correcting" it.
+22. **Check attribution accuracy.** Confirm the quoted line actually comes from the work you attribute it to (author, title, chapter/回目). Misattribution is common — verify against the primary text, not secondary commentary.
+23. **Apply corrections.** If any citation is inaccurate (wrong character, wrong source, wrong attribution), fix the article and record the change in the corrections doc per Phase 5. After fixing, re-check the affected section for duplication or flow breaks (Phase 4).
 
 ## Repo conventions (from AGENTS.md)
 
@@ -106,17 +110,20 @@ After the article is complete, verify every citation and quoted reference:
 - [ ] **Phase 1**: User's thought-flow preserved — same order, same points, same conclusions; no silent restructuring.
 - [ ] **Phase 2**: Every historical/literary claim has ≥2 independent reliable sources; primary texts preferred over commentary; chapter attributions verified against original.
 - [ ] **Phase 3**: Every cited source was actually opened and the supporting sentence was located; sources are genuinely independent; no ghost citations.
+- [ ] **Phase 4**: No fact is stated twice within the same entry (biographical context, analysis paragraph, introduction, or conclusion); no sentence in the conclusion restates the introduction word-for-word.
 - [ ] **Phase 6**: Post-writing citation audit completed — every quote verified against primary source, exact wording confirmed, attributions checked.
 - [ ] No claim from untrusted sources (微博/微信/头条/抖音/个人博客) is treated as evidence.
 - [ ] Unverifiable items are in the corrections doc under "待核实", not asserted in the article.
 - [ ] If the user asked to be shown what changed, summarize: added support, corrected facts (before→after), and flagged items.
 - [ ] Uncommon characters annotated with pinyin on first use; common/known characters left unannotated.
-- [ ] Filename follows `YYMMDD-slug`; images referenced as `../imgs/<file>`; README is in sync; word count stated in the article matches the actual CJK character count (verify with a script, not by eye).
+- [ ] Filename follows `YYMMDD-slug`; images referenced as `../imgs/<file>`; README is in sync; word count stated in the article matches the actual CJK character count (verify with: `python3 -c "import re; print(len(re.findall(r'[\u4e00-\u9fff]', open('FILE').read())))"`).
 - [ ] Nothing committed unless the user explicitly asks.
 
 ## Error handling
 
 - **User's draft conflicts with reliable sources**: show the user the discrepancy and both sides' evidence; propose the fix; wait for approval.
+- **Sources conflict and neither is clearly right**: record both versions in the corrections doc under "待核实"; do not silently pick one side. Present the conflict to the user with the evidence for each.
 - **Source is paywalled / unavailable**: rely on the other independent source and note the gap in the corrections doc.
 - **Ambiguous structure in the user's notes**: ask — do not guess the outline.
 - **No reliable source found**: treat the claim as 待核实, do not assert it, tell the user explicitly.
+- **Article is too long for target format**: ask the user which sections to trim or merge; do not silently cut content. If trimming is needed for blog publishing, use the `astro-sync` skill's length conventions as a guide.
