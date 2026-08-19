@@ -1,5 +1,5 @@
 ---
-name: zh-culture
+name: chinese-history-literature-culture
 description: >
   Write, polish, and cite Chinese-language articles on Chinese history,
   literature, and culture (Five Dynasties & Ten Kingdoms, silk, Dream of the
