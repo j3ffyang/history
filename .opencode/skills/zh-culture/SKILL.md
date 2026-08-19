@@ -1,5 +1,5 @@
 ---
-name: zh-history-literature-culture
+name: zh-culture
 description: >
   Write, polish, and cite Chinese-language articles on Chinese history,
   literature, and culture (Five Dynasties & Ten Kingdoms, silk, Dream of the
@@ -22,7 +22,7 @@ This skill complements `astro-sync` (publishing). Writing happens here; publishi
 2. **Keep their voice.** Polish wording and grammar, but do not flatten the user's tone into a house style. A personal, essayistic voice stays a personal, essayistic voice.
 3. **Cite, don't assert.** Every historical or literary claim gets checked against at least two independent, reliable sources. Anything that cannot be verified is NOT asserted in the article; it goes into the batch corrections doc under "待核实" (see AGENTS.md → Working rules → Verify facts before publishing).
 4. **Flag before replacing.** If the user's thought contains a factual error, keep their intent, propose the corrected wording, and get explicit approval before swapping it in (AGENTS.md: "Get approval before any change").
-5. **Never cite a source you have not opened and checked.** A "source" that is merely indexed in search results, or that lives on a trusted domain but does not actually contain the claimed sentence, is not a source — it is a ghost citation. Every citation must be verified against the source's actual content (see Phase 2.5).
+5. **Never cite a source you have not opened and checked.** A "source" that is merely indexed in search results, or that lives on a trusted domain but does not actually contain the claimed sentence, is not a source — it is a ghost citation. Every citation must be verified against the source's actual content (see Phase 3).
 
 ## Inputs
 
@@ -32,6 +32,17 @@ This skill complements `astro-sync` (publishing). Writing happens here; publishi
   - `polish` — improve an existing draft (grammar, flow, clarity, style) while preserving structure and voice.
   - `cite` — add/verify citations for an existing article (may combine with polish). Default: follow whatever the user asked; ask if unclear.
 - `audience` / `tone` — optional; e.g. "general readers", "academic-leaning", "blog-style". Default: general literate audience.
+
+## Source quality — trusted vs. untrusted
+
+**Trusted** (meet the ≥2-sources rule):
+- Primary-text archives: Wikisource (维基文库) — classical texts, 二十四史, 诗文集, 白话小说原文.
+- Official academic institutions: 中国社科院考古研究所 kaogu.cn, 中国社会科学网 cssn.cn, 故宫博物院, 国家图书馆, university presses.
+- Academic presses & canonical editions: 中华书局 (点校本二十四史, 《南唐二主词校订》等), 上海古籍出版社, 人民文学出版社, 商务印书馆.
+- Wikipedia entries (维基百科) that carry references.
+- Peer-reviewed journals / academic databases (中国知网 CNKI, ResearchGate).
+
+**NOT trusted** (never count as evidence): 微博 / WeChat / 头条 / 抖音 / TikTok / 哔哩哔哩弹幕 / personal blogs / 百度百科 无参考文献词条 / forum posts / AI chat outputs.
 
 ## Workflow
 
@@ -47,10 +58,10 @@ For each claim that needs support (dates, events, attributions, quotations, chap
 
 4. **Search the web** for each fact independently. Prefer site-restricted queries against trusted domains, e.g. `site:zh.wikisource.org 洛神赋` or `kaogu.cn 钱山漾 年代`.
 5. **Cross-check with at least two independent, reliable sources.** When the sources disagree, record the discrepancy in the corrections doc rather than silently picking a side.
-6. **Prefer primary text.** For classical works (洛神赋, 红楼梦, 旧五代史, 人间词话, 诗经, 全宋词…), quote from the primary text where possible (Wikisource scans/editions, 中华书局点校本), and verify the exact wording and chapter (回目) number.
+6. **Prefer primary text over commentary.** For classical works (洛神赋, 红楼梦, 旧五代史, 人间词话, 诗经, 全宋词…), quote from the primary text where possible (Wikisource scans/editions, 中华书局点校本), and verify the exact wording and chapter (回目) number. When a fact appears in both a primary text and a secondary commentary, cite the primary text; the commentary may be wrong or derivative.
 7. For literature, verify **chapter attributions against the original text**, not memory: e.g. 刘姥姥一进荣国府=第六回, 元妃省亲=第十八回, 葬花吟=第二十七回, 黛玉焚稿=第九十七回.
 
-### Phase 2.5 — Cross-checking the source (verify the truth)
+### Phase 3 — Source verification (verify the truth)
 
 A trusted domain is not proof. The claim must be **actually present in the source's content**, not merely plausibly attributed to it. For every claim:
 
@@ -58,34 +69,30 @@ A trusted domain is not proof. The claim must be **actually present in the sourc
 9. **Match claim ↔ source one-to-one.** Pair every fact in the draft with the exact sentence(s) that support it in each source. If a source does not actually say what the draft claims, drop that source or fix the claim; do not keep a citation next to a claim it does not support.
 10. **Check source independence.** Two sources that copy one another (e.g. an article, a WeChat re-post, and a blog all reproducing the same 维基百科 text; or a Wikipedia entry whose only references are the very claim sites) count as ONE source, not two. Look for genuinely independent origins — a primary text, an academic paper, an official institution report.
 11. **Watch for ghost citations.** A citation is suspicious if: the title looks plausible but no copy exists; the quoted sentence cannot be found anywhere in the cited work; or search returns only secondary mentions. AI-generated and memory-invented citations (e.g. 爱国书社1927, 中华书局 《李煿词作赏析》) must be detected and removed — see `docs/260808-corrections-by-citation.md` for worked examples.
-12. **Cross-source sentence audit.** Take each quoted sentence and search it (in full, or its distinctive clause) on the web. It must surface in the primary text or in independently-verifiable sources. A sentence that only ever appears inside your own draft is fabricated.
-13. **Prefer the original over commentary.** When a fact appears in both a primary text and a secondary commentary, cite the primary text; the commentary may be wrong or derivative. If two reliable sources disagree, record the discrepancy in the corrections doc rather than silently picking a side.
 
-### Source quality — trusted vs. untrusted
+### Phase 4 — Write / polish
 
-**Trusted** (meet the ≥2-sources rule):
-- Primary-text archives: Wikisource (维基文库) — classical texts, 二十四史, 诗文集, 白话小说原文.
-- Official academic institutions: 中国社科院考古研究所 kaogu.cn, 中国社会科学网 cssn.cn, 故宫博物院, 国家图书馆, university presses.
-- Academic presses & canonical editions: 中华书局 (点校本二十四史, 《南唐二主词校订》等), 上海古籍出版社, 人民文学出版社, 商务印书馆.
-- Wikipedia entries (维基百科) that carry references.
-- Peer-reviewed journals / academic databases (中国知网 CNKI, ResearchGate).
-
-**NOT trusted** (never count as evidence): 微博 / WeChat / 头条 / 抖音 / TikTok / 哔哩哔哩弹幕 / personal blogs / 百度百科 无参考文献词条 / forum posts / AI chat outputs.
-
-### Phase 3 — Write / polish
-
-14. Write in Simplified Chinese by default (Traditional only if the source or user's draft is Traditional). Follow the user's section order and emphasis. Expand their points with researched detail; mark each fact-supported sentence with a citation marker.
-15. Use precise terminology with first-use glosses where helpful (e.g. 包衣 = 内务府奴仆/皇室世仆, 软烟罗 vs 蝉翼纱).
-16. Cite properly:
+12. Write in Simplified Chinese by default (Traditional only if the source or user's draft is Traditional). Follow the user's section order and emphasis. Expand their points with researched detail; mark each fact-supported sentence with a citation marker.
+13. Use precise terminology with first-use glosses where helpful (e.g. 包衣 = 内务府奴仆/皇室世仆, 软烟罗 vs 蝉翼纱). Annotate uncommon characters with pinyin on first use using `字（pinyin）` format — e.g. 杕杜（dì dù）、蝃蝀（dì dōng）、隮（jī）、淇（qí）、滺滺（yōu yōu）、桧（guì）、睆（huàn）、菅（jiān）、澌（sī）、钏（chuàn）. Do not annotate common characters or characters already widely known to the target audience.
+14. Cite properly:
     - Inline footnote-style markers `[¹]`, `[²]`… with a **引用来源** / **参考文献** list at the end (author, title, edition/publisher, year; for Wikisource, the text + edition note; for web, site + title + access date).
     - For text you quote verbatim, quote exactly (including chapter/回目), and give the source immediately.
     - Include an access date (今日日期) for web sources.
 
-### Phase 4 — Corrections doc (conditional)
+### Phase 5 — Corrections doc (conditional)
 
-17. Quality control is the goal; the corrections doc is only the evidence. If every claim verifies against ≥2 independent sources, **no corrections doc is created** — do not manufacture one to "complete" the workflow.
-18. Anything you could not verify, or that contradicts reliable sources, goes into `docs/YYMMDD-corrections-by-citation.md` (reuse today's date if none exists). Structure per the example `docs/260808-corrections-by-citation.md`: 校核总表 (table), 已修正逐条明细 (with 依据), 待核实清单, 引用来源清单.
-19. If the article already has a corrections doc, append to it rather than creating a duplicate.
+15. Quality control is the goal; the corrections doc is only the evidence. If every claim verifies against ≥2 independent sources, **no corrections doc is created** — do not manufacture one to "complete" the workflow.
+16. Anything you could not verify, or that contradicts reliable sources, goes into `docs/YYMMDD-corrections-by-citation.md` (reuse today's date if none exists). Structure per the example `docs/260808-corrections-by-citation.md`: 校核总表 (table), 已修正逐条明细 (with 依据), 待核实清单, 引用来源清单.
+17. If the article already has a corrections doc, append to it rather than creating a duplicate.
+
+### Phase 6 — Post-writing citation audit
+
+After the article is complete, verify every citation and quoted reference:
+
+18. **Search each quoted sentence on the web.** Take every verbatim quote (classical poetry, historical texts, primary sources) and search it in full or by its distinctive clause. Confirm it surfaces in the primary text or independently-verifiable sources.
+19. **Verify exact wording.** Classical texts often have variant editions. Confirm the quote matches the edition you cite (e.g. 中华书局点校本 vs. Wikisource). If the user's source uses a different reading, note the variant rather than silently "correcting" it.
+20. **Check attribution accuracy.** Confirm the quoted line actually comes from the work you attribute it to (author, title, chapter/回目). Misattribution is common — verify against the primary text, not secondary commentary.
+21. **Apply corrections.** If any citation is inaccurate (wrong character, wrong source, wrong attribution), fix the article and record the change in the corrections doc per Phase 5.
 
 ## Repo conventions (from AGENTS.md)
 
@@ -96,15 +103,14 @@ A trusted domain is not proof. The claim must be **actually present in the sourc
 
 ## Verification checklist (run before finishing)
 
-- [ ] The user's thought-flow is preserved: same order, same points, same conclusions; no silent restructuring.
-- [ ] Every historical/literary claim has ≥2 independent reliable sources (from the trusted list); citations are attached to the specific claim.
-- [ ] **Every cited source was actually opened and the supporting sentence was located in its content** — no citation rides on a claim the source does not state.
-- [ ] The ≥2 sources are genuinely independent (not copies of one another); no ghost citations (plausible-looking titles or quoted sentences that exist nowhere).
-- [ ] Every quoted sentence was searched on the web and surfaced in a primary text or an independently-verifiable source — nothing fabricated.
-- [ ] Primary-text quotations match the original wording and chapter.
+- [ ] **Phase 1**: User's thought-flow preserved — same order, same points, same conclusions; no silent restructuring.
+- [ ] **Phase 2**: Every historical/literary claim has ≥2 independent reliable sources; primary texts preferred over commentary; chapter attributions verified against original.
+- [ ] **Phase 3**: Every cited source was actually opened and the supporting sentence was located; sources are genuinely independent; no ghost citations.
+- [ ] **Phase 6**: Post-writing citation audit completed — every quote verified against primary source, exact wording confirmed, attributions checked.
 - [ ] No claim from untrusted sources (微博/微信/头条/抖音/个人博客) is treated as evidence.
 - [ ] Unverifiable items are in the corrections doc under "待核实", not asserted in the article.
 - [ ] If the user asked to be shown what changed, summarize: added support, corrected facts (before→after), and flagged items.
+- [ ] Uncommon characters annotated with pinyin on first use; common/known characters left unannotated.
 - [ ] Filename follows `YYMMDD-slug`; images referenced as `../imgs/<file>`; README is in sync; word count stated in the article matches the actual CJK character count (verify with a script, not by eye).
 - [ ] Nothing committed unless the user explicitly asks.
 
