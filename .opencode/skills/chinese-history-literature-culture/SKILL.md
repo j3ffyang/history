@@ -62,6 +62,14 @@ For each claim that needs support (dates, events, attributions, quotations, chap
 6. **Prefer primary text over commentary.** For classical works (洛神赋, 红楼梦, 旧五代史, 人间词话, 诗经, 全宋词…), quote from the primary text where possible (Wikisource scans/editions, 中华书局点校本), and verify the exact wording and chapter (回目) number. When a fact appears in both a primary text and a secondary commentary, cite the primary text; the commentary may be wrong or derivative.
 7. For literature, verify **chapter attributions against the original text**, not memory: e.g. for《红楼梦》刘姥姥一进荣国府=第六回, 元妃省亲=第十八回; for《诗经》check poem titles against《毛诗正义》; for五代史料 verify episode numbers against《旧五代史》or《新五代史》.
 7a. **Know when one source suffices.** Well-established facts in primary texts (e.g. a poem's exact wording in Wikisource, a chapter number in《红楼梦》) need only one verified source. Reserve the ≥2-source requirement for contested claims, interpretive assertions, and historical attributions.
+7b. **《红楼梦》: know the version systems before attributing anything.** The work survives in two textual families whose 回目 AND 正文 both differ: the 脂评抄本系统 (甲戌/己卯/庚辰…, all ending at chapter 80) and the 程高本系统 (程甲/程乙, 120 chapters, 后四十回 compiled by 程伟元/高鹗). Consequences:
+    - **脂批 ceiling**: 脂砚斋 commentary exists only for the first eighty chapters. Any claimed 脂批 on a 后四十回 event (焚稿、妙玉被掠、宝玉出家…) is automatically suspect — reject unless a specific 本 + 回数 is named.
+    - **Name the edition when quoting**: e.g. the 第四十一回 回目 is「栊翠庵茶品梅花雪　怡红院劫遇母蝗虫」in 庚辰本 but「贾宝玉品茶栊翠庵」in 程甲本; the《警幻仙姑赋》has 异文 across editions (待止而欲行 / 欲止而仍行；秋菊被霜 / 秋蕙披霜). State which system you quote from; where readings differ, record the variant instead of silently picking one.
+
+**Fetching primary texts — practical tips** (learned the hard way):
+- Wikisource《红楼梦》chapter pages use zero-padded titles: `紅樓夢/第041回` works; non-padded forms (`第四十一回`) 404. URL-encode the Chinese title path.
+- Some Chinese text sites serve GBK and come back as mojibake through web fetch (e.g. purepen.com). Do not fight them — fall back to another host carrying the same text: zh.wikisource.org, 识典古籍 (shidianguji.com), 古文岛 (guwendao.net), 国学梦 (guoxuemeng.com).
+- For 脂本 extent and 回目 lists, publisher catalogue pages (e.g. 国家图书馆出版社 nlcpress.com for 庚辰本) are a reliable quick check.
 
 ### Phase 3 — Source verification (verify the truth)
 
@@ -71,13 +79,14 @@ A trusted domain is not proof. The claim must be **actually present in the sourc
 9. **Match claim ↔ source one-to-one.** Pair every fact in the draft with the exact sentence(s) that support it in each source. If a source does not actually say what the draft claims, drop that source or fix the claim; do not keep a citation next to a claim it does not support.
 10. **Check source independence.** Two sources that copy one another (e.g. an article, a WeChat re-post, and a blog all reproducing the same 维基百科 text; or a Wikipedia entry whose only references are the very claim sites) count as ONE source, not two. Look for genuinely independent origins — a primary text, an academic paper, an official institution report.
 11. **Watch for ghost citations.** A citation is suspicious if: the title looks plausible but no copy exists; the quoted sentence cannot be found anywhere in the cited work; or search returns only secondary mentions. AI-generated and memory-invented citations (e.g. 爱国书社1927, 中华书局 《李煿词作赏析》) must be detected and removed — see `docs/260808-corrections-by-citation.md` for worked examples.
+11a. **Treat high-risk claim types as unverified until found verbatim.** In AI-drafted literary articles, three patterns are fabricated most often: (i) character dialogue ("X 对 Y 说：……"); (ii) usage statistics about an author or text ("脂砚斋评注中最常出现的词汇是痴/绝/悲/幽"); (iii) 批语归因 — attributing an unnamed paraphrase to a commentator without 本 + 回数. Each must be located word-for-word in the primary text or named edition before it stays in the draft; otherwise it goes to 待核实 (see `docs/260822-corrections-by-citation.md` rows 3–11 for worked examples).
 
 ### Phase 4 — Write / polish
 
 12. Write in Simplified Chinese by default (Traditional only if the source or user's draft is Traditional). Follow the user's section order and emphasis. Expand their points with researched detail; mark each fact-supported sentence with a citation marker.
 13. **Remove duplication.** Each fact should appear only once per entry. After writing a section, read it end-to-end and cut any sentence that restates information already present — whether in a biographical one-liner, an analysis paragraph, the introduction, or the conclusion. Common patterns: biographical context repeating the analysis paragraph, the结语 echoing the introduction, or two paragraphs in the same entry making the same point with different words.
 14. Use precise terminology with first-use glosses where helpful (e.g. 包衣 = 内务府奴仆/皇室世仆, 软烟罗 vs 蝉翼纱). Annotate uncommon characters with pinyin on first use using `字（pinyin）` format — e.g. 杕杜（dì dù）、蝃蝀（dì dōng）、隮（jī）、淇（qí）、滺滺（yōu yōu）、桧（guì）、睆（huàn）、菅（jiān）、澌（sī）、钏（chuàn）. Do not annotate common characters or characters already widely known to the target audience.
-15. **Maintain structural consistency.** All entries in a list-style article should use the same heading level (e.g. all `##`). Do not use labels that imply hierarchy (附录, 补充) unless the user explicitly requests them. If the article has a conclusion (结语), place it at the very end — never in the middle. The introduction should not announce a two-tier structure (main body + appendix) unless the user's thought-flow explicitly designs one.
+15. **Maintain structural consistency.** All entries in a list-style article should use the same heading level (e.g. all `##`). Do not use labels that imply hierarchy (附录, 补充) unless the user explicitly requests them. If the article has a conclusion (结语), place it at the very end — never in the middle. The introduction should not announce a two-tier structure (main body + appendix) unless the user's thought-flow explicitly designs one. Maximum heading depth is `###`; anything deeper becomes bold run-in labels (`**小标题**` on its own line, or `**标签**：` leading a list/paragraph) rather than numbered `####` headings — no 4.2.3-style levels.
 16. Cite properly:
     - Inline footnote-style markers `[¹]`, `[²]`… with a **引用来源** / **参考文献** list at the end (author, title, edition/publisher, year; for Wikisource, the text + edition note; for web, site + title + access date).
     - For text you quote verbatim, quote exactly (including chapter/回目), and give the source immediately.
@@ -87,7 +96,7 @@ A trusted domain is not proof. The claim must be **actually present in the sourc
 
 17. Quality control is the goal; the corrections doc is only the evidence. If every claim verifies against ≥2 independent sources, **no corrections doc is created** — do not manufacture one to "complete" the workflow.
 18. Anything you could not verify, or that contradicts reliable sources, goes into `docs/YYMMDD-corrections-by-citation.md` (reuse today's date if none exists). Structure per the example `docs/260808-corrections-by-citation.md`: 校核总表 (table), 已修正逐条明细 (with 依据), 待核实清单, 引用来源清单.
-19. If the article already has a corrections doc, append to it rather than creating a duplicate.
+19. If the article already appears in an older corrections doc, cross-reference the prior fixes by doc + row number (e.g. 「260808 #35」) instead of re-litigating settled items. Create a new dated doc only when this audit is a separate pass over the article (e.g. a re-review with a different focus); build on the old rows you rely on, and keep the 处置分类 (①已修正 / ②待核实 / ③已核对) consistent across docs.
 
 ### Phase 6 — Post-writing citation audit
 
@@ -108,8 +117,8 @@ After the article is complete, verify every citation and quoted reference:
 ## Verification checklist (run before finishing)
 
 - [ ] **Phase 1**: User's thought-flow preserved — same order, same points, same conclusions; no silent restructuring.
-- [ ] **Phase 2**: Every historical/literary claim has ≥2 independent reliable sources; primary texts preferred over commentary; chapter attributions verified against original.
-- [ ] **Phase 3**: Every cited source was actually opened and the supporting sentence was located; sources are genuinely independent; no ghost citations.
+- [ ] **Phase 2**: Every historical/literary claim has ≥2 independent reliable sources; primary texts preferred over commentary; chapter attributions verified against original; 《红楼梦》claims respect the 脂批 ch80 ceiling and name their edition (脂本 vs 程高本).
+- [ ] **Phase 3**: Every cited source was actually opened and the supporting sentence was located; sources are genuinely independent; no ghost citations; dialogue quotes, usage statistics, and 批语归因 located verbatim in a primary text or named edition.
 - [ ] **Phase 4**: No fact is stated twice within the same entry (biographical context, analysis paragraph, introduction, or conclusion); no sentence in the conclusion restates the introduction word-for-word.
 - [ ] **Phase 6**: Post-writing citation audit completed — every quote verified against primary source, exact wording confirmed, attributions checked.
 - [ ] No claim from untrusted sources (微博/微信/头条/抖音/个人博客) is treated as evidence.
