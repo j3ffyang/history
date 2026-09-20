@@ -106,6 +106,17 @@ After the article is complete, verify every citation and quoted reference:
 21. **Verify exact wording.** Classical texts often have variant editions. Confirm the quote matches the edition you cite (e.g. 中华书局点校本 vs. Wikisource). If the user's source uses a different reading, note the variant rather than silently "correcting" it.
 22. **Check attribution accuracy.** Confirm the quoted line actually comes from the work you attribute it to (author, title, chapter/回目). Misattribution is common — verify against the primary text, not secondary commentary.
 23. **Apply corrections.** If any citation is inaccurate (wrong character, wrong source, wrong attribution), fix the article and record the change in the corrections doc per Phase 5. After fixing, re-check the affected section for duplication or flow breaks (Phase 4).
+24. **Check marker ↔ entry mapping.** Verify that every inline marker `[ⁿ]` resolves to exactly one entry in the 引用来源 / 参考文献 list, and that the marker count equals the entry count — no orphan markers, no uncited entries. (A real defect in an earlier article: `[³]` and `[⁴]` both collapsed into one entry while another entry sat unmarked.)
+
+## Genre: 物象细读 (object-as-lens close reading)
+
+Some articles take a single object from the primary text — a medicine (第七十七回's 百年人参), a garment, a dish, a colour — and read it as a lens on the whole work. This is a recognized article type in this repo; it has worked once and is worth repeating. The procedure:
+
+1. Locate the object in the primary text and fix its exact chapter(s); read the surrounding scene, not just the one sentence.
+2. Identify its literal role and its symbolic function (物象): what it is made of, who handles it, what it costs, what becomes of it.
+3. Trace it outward in widening rings — 物 → 人物 → 家族 → 时代/国. Each ring must stay anchored to a verifiable textual detail.
+4. Frame the outermost ring (家族/国/时代) as a reader's interpretation, attributed to a named school or scholar, per the repo's interpretation-vs-fact rule; cite the work's own boundary statements where relevant.
+5. Pair the object with an echo elsewhere in the book (an earlier foreshadow and a later payoff) to show the 草蛇灰线 structure.
 
 ## Repo conventions (from AGENTS.md)
 
@@ -121,6 +132,8 @@ After the article is complete, verify every citation and quoted reference:
 - [ ] **Phase 3**: Every cited source was actually opened and the supporting sentence was located; sources are genuinely independent; no ghost citations; dialogue quotes, usage statistics, and 批语归因 located verbatim in a primary text or named edition.
 - [ ] **Phase 4**: No fact is stated twice within the same entry (biographical context, analysis paragraph, introduction, or conclusion); no sentence in the conclusion restates the introduction word-for-word.
 - [ ] **Phase 6**: Post-writing citation audit completed — every quote verified against primary source, exact wording confirmed, attributions checked.
+- [ ] **Citation markers map 1:1.** Every inline marker `[ⁿ]` resolves to exactly one 引用来源/参考文献 entry, and the marker count equals the entry count — no orphan markers, no uncited entries.
+- [ ] **Interpretation is labelled.** Any allegorical / 索隐 / 自传 / 家国 reading is marked as the reader's interpretation and attributed to a named school or scholar; verifiable textual facts are stated as facts.
 - [ ] No claim from untrusted sources (微博/微信/头条/抖音/个人博客) is treated as evidence.
 - [ ] Unverifiable items are in the corrections doc under "待核实", not asserted in the article.
 - [ ] If the user asked to be shown what changed, summarize: added support, corrected facts (before→after), and flagged items.
