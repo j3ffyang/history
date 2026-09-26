@@ -21,6 +21,7 @@ Articles live in [`docs/`](docs/); images for each article live in [`imgs/`](img
 | [The Twelve Girl Actors in *Dream of the Red Chamber*](docs/260911-12-girl-actors.md) | The troupe bought in Suzhou for Yuanchun's visit — their role-types, the cross-dressing "false phoenix" bond of Ouguan and Diguan, Lingguan's defiance, and their dispersal, expulsion, and taking the veil |
 | [Corrections by Citation](docs/260808-corrections-by-citation.md) | A fact-checking record for the five articles above: every confirmed fix and every flagged item, each with its citations |
 | [Corrections by Citation II](docs/260822-corrections-by-citation.md) | Follow-up audit of *The Rhapsody of the Luo River*: heading-depth cleanup, chapter-97 edition attribution, replaced unverifiable quotes and Zhiyanzhai attributions |
+| [Corrections by Citation III](docs/260925-corrections-by-citation.md) | Fact-check record for *The Twelve Girl Actors*: the 菂官 reading and variant, three wording fixes, and the chapter-30 回目 variant left to verify |
 
 ---
 
@@ -39,3 +40,4 @@ Articles live in [`docs/`](docs/); images for each article live in [`imgs/`](img
 | [第77回的百年人参](docs/260909-hlm-ch77.md) | 《红楼梦》第七十七回细读——一根“上好却无性力”的百年人参，如何成为贾府由盛转衰最凝练的物象 |
 | [红楼梦十二个小戏子](docs/260911-12-girl-actors.md) | 为元妃省亲从苏州买来的十二个女戏子——行当、藕官与菂官的“假凤虚凰”、龄官的傲骨，以及她们的遣散、逐出与出家 |
 | [校勘与引证说明（二）](docs/260822-corrections-by-citation.md) | 《洛神赋赏析》复审记录——标题层级精简、第九十七回版本归属、不可证引文与脂批归因的替换 |
+| [校勘与引证说明（三）](docs/260925-corrections-by-citation.md) | 《红楼梦十二个小戏子》校勘记录——菂官读音与异文、三处表述修正，以及第三十回回目异文归属的待核实项 |
