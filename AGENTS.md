@@ -29,7 +29,8 @@ Every file in `docs/` and `imgs/` follows a `YYMMDD-slug` pattern: a 6-digit dat
 ## Conventions
 
 - Articles reference images with a relative path (`../imgs/<file>`); keep `docs/` and `imgs/` as sibling directories so those links stay valid.
-- Chinese articles use Simplified Chinese by default; Traditional Chinese only when the article was originally written that way.
+- Chinese articles use Simplified Chinese by default; Traditional Chinese only when the article was originally written that way. After drafting, scan for Traditional/variant characters that may have slipped in (e.g. 嬤/嬷, 與/与, 歸/归) and fix them.
 - **Prose wrapping.** Prose auto-wraps; there is no hard-wrap requirement. Write each paragraph as a single line and let the renderer wrap it. Never split a CJK word across a line break. List items, code spans, and headings keep their own structure.
 - **Quotation marks.** Use straight ASCII double quotes (`"`) for quotations in articles. Do not substitute full-width curly quotes (“ ”); reserve corner brackets (「 」) for corrections/校勘 documents.
+- **Bold + quoted terms.** When a quoted term is also bolded, keep the quotes *outside* the emphasis markers — write `"**term**"`, not `**"term"**`. In CommonMark an opening `**` immediately followed by `"` is not left-flanking when preceded by a word character, so the asterisks render literally instead of bolding. The same rule applies to any delimiter adjacent to emphasis (quotes, `《》`, brackets): put them outside `**`.
 - This directory is a separate git repository (a submodule of the parent `negtivSpace` repo) with two remotes on `main`: `j3ffyang` and `negtivspace` — push to both, then commit the updated submodule pointer in the parent.
