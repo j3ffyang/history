@@ -16,10 +16,12 @@ Articles live in [`docs/`](docs/); images for each article live in [`imgs/`](img
 | [Chan Ideas in the *Luo Shen Fu* and *Hong Lou Meng*](docs/260822-luoshenfu-hongloumeng-chan.md) | Companion essay: how 空 (emptiness), 缘 (dependent arising), 无常 (impermanence), and 悟道 (awakening) run from Cao Zhi's rhapsody to Cao Xueqin's novel |
 | [Who Is Zhiyanzhai?](docs/260723-whoszhiyanzhai.md) | Three centuries of mystery around *Dream of the Red Chamber*'s anonymous commentator: five identity hypotheses and the redology debate |
 | [The Names of Maids in *Dream of the Red Chamber*](docs/260819-hlm-yahuan-shijing.md) | How Cao Xueqin named his maids — classical poetry origins from the *Book of Songs* and Tang-Song verse |
+| [Jiang Xun's *Dream of the Red Chamber*](docs/260820-jiangxun.md) | A portrait of 蒋勋's four-year *细说红楼梦* course — his method and themes (youth, individual value, 儒/道, compromise), and the "aesthetic reading" vs. 考证 divide |
 | [Why I Love *Dream of the Red Chamber*](docs/260908-why-love-hlm.md) | Seven reasons for loving the novel — fiction vs. reality, its Qing-era encyclopaedia of daily life, narrative craft, character depth, poetry, aesthetics, and how leading redologists read it |
 | [The Centenarian Ginseng of Chapter 77](docs/260909-hlm-ch77.md) | A close reading of *Dream of the Red Chamber* ch. 77 — how a single hundred-year-old ginseng, "top-grade yet spent", becomes the novel's tightest emblem of the Jia family's decline |
 | [The Twelve Girl Actors in *Dream of the Red Chamber*](docs/260911-12-girl-actors.md) | The troupe bought in Suzhou for Yuanchun's visit — their role-types, the cross-dressing "false phoenix" bond of Ouguan and Diguan, Lingguan's defiance, and their dispersal, expulsion, and taking the veil |
 | [Qingwen](docs/260912-qingwen.md) | A character study of *Dream of the Red Chamber*'s Qingwen — her 判词 in the 又副册, the torn-fan scene, mending the peacock cloak, her expulsion and early death, and the *Elegy for the Hibiscus Maid* written for her |
+| [Chapter 5: The Ending Written at the Start](docs/260919-hlm-ch5.md) | A close reading of *Dream of the Red Chamber* ch. 5 — the 太虚幻境 couplet "假作真时真亦假", the three registers of 判词, the twelve songs, and the editions question |
 | [Corrections by Citation](docs/260808-corrections-by-citation.md) | A fact-checking record for the five articles above: every confirmed fix and every flagged item, each with its citations |
 | [Corrections by Citation II](docs/260822-corrections-by-citation.md) | Follow-up audit of *The Rhapsody of the Luo River*: heading-depth cleanup, chapter-97 edition attribution, replaced unverifiable quotes and Zhiyanzhai attributions |
 | [Corrections by Citation III](docs/260925-corrections-by-citation.md) | Fact-check record for *The Twelve Girl Actors*: the 菂官 reading and variant, three wording fixes, and the chapter-30 回目 variant left to verify |
@@ -37,9 +39,11 @@ Articles live in [`docs/`](docs/); images for each article live in [`imgs/`](img
 | [脂砚斋是谁](docs/260723-whoszhiyanzhai.md) | 脂砚斋是谁——《红楼梦》匿名评点者三百年的谜团：五大身份假说与红学之争 |
 | [校勘与引证说明](docs/260808-corrections-by-citation.md) | 以引证为准的校勘记录——上面五篇文章的全部已修正项与待核实项，逐条附来源依据 |
 | [红楼梦丫鬟名字溯源](docs/260819-hlm-yahuan-shijing.md) | 曹雪芹如何为丫鬟取名——《诗经》与唐宋诗词的古典渊源 |
+| [蒋勋细说红楼梦](docs/260820-jiangxun.md) | 蒋勋《细说红楼梦》：一场四年的课——他的讲法（学养与性情）、主题（青春、个体价值、儒道之别、妥协），以及“审美读法”与“考证读法”的分野 |
 | [为什么会喜欢红楼梦](docs/260908-why-love-hlm.md) | 从虚实之趣、清代百科、故事编织、人物性格、诗词典故、美学世界到名家读法，记录喜欢《红楼梦》的七个维度 |
 | [第77回的百年人参](docs/260909-hlm-ch77.md) | 《红楼梦》第七十七回细读——一根“上好却无性力”的百年人参，如何成为贾府由盛转衰最凝练的物象 |
 | [红楼梦十二个小戏子](docs/260911-12-girl-actors.md) | 为元妃省亲从苏州买来的十二个女戏子——行当、藕官与菂官的“假凤虚凰”、龄官的傲骨，以及她们的遣散、逐出与出家 |
 | [晴雯](docs/260912-qingwen.md) | 《红楼梦》又副册第一人晴雯——判词、撕扇、病补雀金裘、抄检被逐、含冤夭亡，以及宝玉为她写的《芙蓉女儿诔》 |
+| [红楼梦第五回](docs/260919-hlm-ch5.md) | 《红楼梦》第五回细读——太虚幻境“假作真时真亦假”、三册判词与《红楼梦》十二支曲，以及后四十回作者问题 |
 | [校勘与引证说明（二）](docs/260822-corrections-by-citation.md) | 《洛神赋赏析》复审记录——标题层级精简、第九十七回版本归属、不可证引文与脂批归因的替换 |
 | [校勘与引证说明（三）](docs/260925-corrections-by-citation.md) | 《红楼梦十二个小戏子》校勘记录——菂官读音与异文、三处表述修正，以及第三十回回目异文归属的待核实项 |
