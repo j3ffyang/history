@@ -21,7 +21,6 @@ Articles live in [`docs/`](docs/); images for each article live in [`imgs/`](img
 | [The Centenarian Ginseng of Chapter 77](docs/260909-hlm-ch77.md) | A close reading of *Dream of the Red Chamber* ch. 77 — how a single hundred-year-old ginseng, "top-grade yet spent", becomes the novel's tightest emblem of the Jia family's decline |
 | [The Twelve Girl Actors in *Dream of the Red Chamber*](docs/260911-12-girl-actors.md) | The troupe bought in Suzhou for Yuanchun's visit — their role-types, the cross-dressing "false phoenix" bond of Ouguan and Diguan, Lingguan's defiance, and their dispersal, expulsion, and taking the veil |
 | [Qingwen](docs/260912-qingwen.md) | A character study of *Dream of the Red Chamber*'s Qingwen — her 判词 in the 又副册, the torn-fan scene, mending the peacock cloak, her expulsion and early death, and the *Elegy for the Hibiscus Maid* written for her |
-| [Chapter 5: The Ending Written at the Start](docs/260919-hlm-ch5.md) | A close reading of *Dream of the Red Chamber* ch. 5 — the 太虚幻境 couplet "假作真时真亦假", the three registers of 判词, the twelve songs, and the editions question |
 | [Corrections by Citation](docs/260808-corrections-by-citation.md) | A fact-checking record for the five articles above: every confirmed fix and every flagged item, each with its citations |
 | [Corrections by Citation II](docs/260822-corrections-by-citation.md) | Follow-up audit of *The Rhapsody of the Luo River*: heading-depth cleanup, chapter-97 edition attribution, replaced unverifiable quotes and Zhiyanzhai attributions |
 | [Corrections by Citation III](docs/260925-corrections-by-citation.md) | Fact-check record for *The Twelve Girl Actors*: the 菂官 reading and variant, three wording fixes, and the chapter-30 回目 variant left to verify |
@@ -44,6 +43,5 @@ Articles live in [`docs/`](docs/); images for each article live in [`imgs/`](img
 | [第77回的百年人参](docs/260909-hlm-ch77.md) | 《红楼梦》第七十七回细读——一根“上好却无性力”的百年人参，如何成为贾府由盛转衰最凝练的物象 |
 | [红楼梦十二个小戏子](docs/260911-12-girl-actors.md) | 为元妃省亲从苏州买来的十二个女戏子——行当、藕官与菂官的“假凤虚凰”、龄官的傲骨，以及她们的遣散、逐出与出家 |
 | [晴雯](docs/260912-qingwen.md) | 《红楼梦》又副册第一人晴雯——判词、撕扇、病补雀金裘、抄检被逐、含冤夭亡，以及宝玉为她写的《芙蓉女儿诔》 |
-| [红楼梦第五回](docs/260919-hlm-ch5.md) | 《红楼梦》第五回细读——太虚幻境“假作真时真亦假”、三册判词与《红楼梦》十二支曲，以及后四十回作者问题 |
 | [校勘与引证说明（二）](docs/260822-corrections-by-citation.md) | 《洛神赋赏析》复审记录——标题层级精简、第九十七回版本归属、不可证引文与脂批归因的替换 |
 | [校勘与引证说明（三）](docs/260925-corrections-by-citation.md) | 《红楼梦十二个小戏子》校勘记录——菂官读音与异文、三处表述修正，以及第三十回回目异文归属的待核实项 |
