@@ -24,6 +24,7 @@ Articles live in [`docs/`](docs/); images for each article live in [`imgs/`](img
 | [Corrections by Citation](docs/260808-corrections-by-citation.md) | A fact-checking record for the five articles above: every confirmed fix and every flagged item, each with its citations |
 | [Corrections by Citation II](docs/260822-corrections-by-citation.md) | Follow-up audit of *The Rhapsody of the Luo River*: heading-depth cleanup, chapter-97 edition attribution, replaced unverifiable quotes and Zhiyanzhai attributions |
 | [Corrections by Citation III](docs/260925-corrections-by-citation.md) | Fact-check record for *The Twelve Girl Actors*: the 菂官 reading and variant, three wording fixes, and the chapter-30 回目 variant left to verify |
+| [Corrections by Citation IV](docs/261005-corrections-by-citation.md) | Fact-check record for *Qingwen*: the ch. 5 / ch. 79 回目 edition variants, quote punctuation aligned to the cited edition, the 庚辰 批语 one-character 异文, a mis-counted character total, a mis-stated action, and softened wording |
 
 ---
 
@@ -45,3 +46,4 @@ Articles live in [`docs/`](docs/); images for each article live in [`imgs/`](img
 | [晴雯](docs/260912-qingwen.md) | 《红楼梦》又副册第一人晴雯——判词、撕扇、病补雀金裘、抄检被逐、含冤夭亡，以及宝玉为她写的《芙蓉女儿诔》 |
 | [校勘与引证说明（二）](docs/260822-corrections-by-citation.md) | 《洛神赋赏析》复审记录——标题层级精简、第九十七回版本归属、不可证引文与脂批归因的替换 |
 | [校勘与引证说明（三）](docs/260925-corrections-by-citation.md) | 《红楼梦十二个小戏子》校勘记录——菂官读音与异文、三处表述修正，以及第三十回回目异文归属的待核实项 |
+| [校勘与引证说明（四）](docs/261005-corrections-by-citation.md) | 《晴雯》校勘记录——第五、七十九回回目异文的版本归属、引文标点与所据版本的对齐、庚辰本批语的一字异文、一处数字之误与一处动作误记，以及表述的收束 |
