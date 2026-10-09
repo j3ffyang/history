@@ -22,6 +22,7 @@ Articles live in [`docs/`](docs/); images for each article live in [`imgs/`](img
 | [The Twelve Girl Actors in *Dream of the Red Chamber*](docs/260911-12-girl-actors.md) | The troupe bought in Suzhou for Yuanchun's visit — their role-types, the cross-dressing "false phoenix" bond of Ouguan and Diguan, Lingguan's defiance, and their dispersal, expulsion, and taking the veil |
 | [Qingwen](docs/260912-qingwen.md) | A character study of *Dream of the Red Chamber*'s Qingwen — her 判词 in the 又副册, the torn-fan scene, mending the peacock cloak, her expulsion and early death, and the *Elegy for the Hibiscus Maid* written for her |
 | [The Fifth Chapter of *Dream of the Red Chamber*](docs/260919-hlm-ch5.md) | A close reading of ch. 5 — the "master key" that writes the ending at the start: the Land of Illusion, the registers of fates, the twelve songs, "excess of feeling" and the ford, the commentary's "pointing the theme", and the fake-cure ending |
+| [The Seven Sages of the Bamboo Grove in *Dream of the Red Chamber*](docs/260922-hlm-seven-sages-zh-hans.md) | How ch. 2's "two natures" (正邪两赋) name-list places Jia Baoyu in the lineage of the Seven Sages — close readings of Ji Kang, Ruan Ji, Liu Ling and the rest from the *Shishuoxinyu* and *Jinshu*, and how Jiang Xun reads them as Baoyu's forebears |
 | [Corrections by Citation](docs/260808-corrections-by-citation.md) | A fact-checking record for the five articles above: every confirmed fix and every flagged item, each with its citations |
 | [Corrections by Citation II](docs/260822-corrections-by-citation.md) | Follow-up audit of *The Rhapsody of the Luo River*: heading-depth cleanup, chapter-97 edition attribution, replaced unverifiable quotes and Zhiyanzhai attributions |
 | [Corrections by Citation III](docs/260925-corrections-by-citation.md) | Fact-check record for *The Twelve Girl Actors*: the 菂官 reading and variant, three wording fixes, and the chapter-30 回目 variant left to verify |
@@ -46,6 +47,7 @@ Articles live in [`docs/`](docs/); images for each article live in [`imgs/`](img
 | [红楼梦十二个小戏子](docs/260911-12-girl-actors.md) | 为元妃省亲从苏州买来的十二个女戏子——行当、藕官与菂官的“假凤虚凰”、龄官的傲骨，以及她们的遣散、逐出与出家 |
 | [晴雯](docs/260912-qingwen.md) | 《红楼梦》又副册第一人晴雯——判词、撕扇、病补雀金裘、抄检被逐、含冤夭亡，以及宝玉为她写的《芙蓉女儿诔》 |
 | [红楼梦第五回：写在开头的结局](docs/260919-hlm-ch5.md) | 《红楼梦》第五回细读——把结局写在开头的“总纲”：太虚幻境、三册判词、十二支曲、意淫与迷津、脂批点题，以及以“假”收束的末回 |
+| [红楼梦里的竹林七贤](docs/260922-hlm-seven-sages-zh-hans.md) | 《红楼梦》第二回贾雨村“正邪两赋”名单里的阮籍、嵇康、刘伶，正是竹林七贤中人；以《世说新语》《晋书》为本，细写七贤的轶事与性情，兼读蒋勋“名士谱系”之解 |
 | [校勘与引证说明（二）](docs/260822-corrections-by-citation.md) | 《洛神赋赏析》复审记录——标题层级精简、第九十七回版本归属、不可证引文与脂批归因的替换 |
 | [校勘与引证说明（三）](docs/260925-corrections-by-citation.md) | 《红楼梦十二个小戏子》校勘记录——菂官读音与异文、三处表述修正，以及第三十回回目异文归属的待核实项 |
 | [校勘与引证说明（四）](docs/261005-corrections-by-citation.md) | 《晴雯》校勘记录——第五、七十九回回目异文的版本归属、引文标点与所据版本的对齐、庚辰本批语的一字异文、一处数字之误与一处动作误记，以及表述的收束 |
