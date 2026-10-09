@@ -1,32 +1,8 @@
 # history
 
-A bilingual (English · 中文) collection of historical and literary articles — Five Dynasties & Ten Kingdoms, silk, *Dream of the Red Chamber*, and Chinese classical literature. All articles are in Chinese.
+A collection of historical and literary articles — Five Dynasties & Ten Kingdoms, silk, *Dream of the Red Chamber*, and Chinese classical literature. All articles are in Chinese.
 
 Articles live in [`docs/`](docs/); images for each article live in [`imgs/`](imgs/) and follow the same `YYMMDD-slug` naming convention as the articles themselves.
-
----
-
-## Contents
-
-| Article | Description |
-|---|---|
-| [Five Dynasties & Ten Kingdoms](docs/260604-five-dynasties-ten-kingdoms-article.md) | An in-depth history of the Five Dynasties & Ten Kingdoms period (907–979), with a timeline, key events, and analysis |
-| [Silk Through the Ages](docs/260620-silk-chn.md) | Silk as a cipher of civilization on a thread — a silk history from archaeology to the loom, told through the lens of *Dream of the Red Chamber* |
-| [The Rhapsody of the Luo River](docs/260629-luoshenfu-literary-analysis.md) | A literary appreciation of Cao Zhi's masterpiece — Wei-Jin aesthetics, the "ideal woman" archetype, and its dialogue with *Dream of the Red Chamber* |
-| [Chan Ideas in the *Luo Shen Fu* and *Hong Lou Meng*](docs/260822-luoshenfu-hongloumeng-chan.md) | Companion essay: how 空 (emptiness), 缘 (dependent arising), 无常 (impermanence), and 悟道 (awakening) run from Cao Zhi's rhapsody to Cao Xueqin's novel |
-| [Who Is Zhiyanzhai?](docs/260723-whoszhiyanzhai.md) | Three centuries of mystery around *Dream of the Red Chamber*'s anonymous commentator: five identity hypotheses and the redology debate |
-| [The Names of Maids in *Dream of the Red Chamber*](docs/260819-hlm-yahuan-shijing.md) | How Cao Xueqin named his maids — classical poetry origins from the *Book of Songs* and Tang-Song verse |
-| [Jiang Xun's *Dream of the Red Chamber*](docs/260820-jiangxun.md) | A portrait of 蒋勋's four-year *细说红楼梦* course — his method and themes (youth, individual value, 儒/道, compromise), and the "aesthetic reading" vs. 考证 divide |
-| [Why I Love *Dream of the Red Chamber*](docs/260908-why-love-hlm.md) | Seven reasons for loving the novel — fiction vs. reality, its Qing-era encyclopaedia of daily life, narrative craft, character depth, poetry, aesthetics, and how leading redologists read it |
-| [The Centenarian Ginseng of Chapter 77](docs/260909-hlm-ch77.md) | A close reading of *Dream of the Red Chamber* ch. 77 — how a single hundred-year-old ginseng, "top-grade yet spent", becomes the novel's tightest emblem of the Jia family's decline |
-| [The Twelve Girl Actors in *Dream of the Red Chamber*](docs/260911-12-girl-actors.md) | The troupe bought in Suzhou for Yuanchun's visit — their role-types, the cross-dressing "false phoenix" bond of Ouguan and Diguan, Lingguan's defiance, and their dispersal, expulsion, and taking the veil |
-| [Qingwen](docs/260912-qingwen.md) | A character study of *Dream of the Red Chamber*'s Qingwen — her 判词 in the 又副册, the torn-fan scene, mending the peacock cloak, her expulsion and early death, and the *Elegy for the Hibiscus Maid* written for her |
-| [The Fifth Chapter of *Dream of the Red Chamber*](docs/260919-hlm-ch5.md) | A close reading of ch. 5 — the "master key" that writes the ending at the start: the Land of Illusion, the registers of fates, the twelve songs, "excess of feeling" and the ford, the commentary's "pointing the theme", and the fake-cure ending |
-| [The Seven Sages of the Bamboo Grove in *Dream of the Red Chamber*](docs/260922-hlm-seven-sages-zh-hans.md) | How ch. 2's "two natures" (正邪两赋) name-list places Jia Baoyu in the lineage of the Seven Sages — close readings of Ji Kang, Ruan Ji, Liu Ling and the rest from the *Shishuoxinyu* and *Jinshu*, and how Jiang Xun reads them as Baoyu's forebears |
-| [Corrections by Citation](docs/260808-corrections-by-citation.md) | A fact-checking record for the five articles above: every confirmed fix and every flagged item, each with its citations |
-| [Corrections by Citation II](docs/260822-corrections-by-citation.md) | Follow-up audit of *The Rhapsody of the Luo River*: heading-depth cleanup, chapter-97 edition attribution, replaced unverifiable quotes and Zhiyanzhai attributions |
-| [Corrections by Citation III](docs/260925-corrections-by-citation.md) | Fact-check record for *The Twelve Girl Actors*: the 菂官 reading and variant, three wording fixes, and the chapter-30 回目 variant left to verify |
-| [Corrections by Citation IV](docs/261005-corrections-by-citation.md) | Fact-check record for *Qingwen*: the ch. 5 / ch. 79 回目 edition variants, quote punctuation aligned to the cited edition, the 庚辰 批语 one-character 异文, a mis-counted character total, a mis-stated action, and softened wording |
 
 ---
 

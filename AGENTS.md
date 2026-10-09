@@ -2,7 +2,7 @@
 
 ## Project
 
-Bilingual (English · 中文) repository of historical and literary articles — Five Dynasties & Ten Kingdoms, silk, *Dream of the Red Chamber*, and Chinese classical literature. All articles are written in Chinese.
+Repository of historical and literary articles — Five Dynasties & Ten Kingdoms, silk, *Dream of the Red Chamber*, and Chinese classical literature. All articles are written in Chinese.
 
 ## Working rules
 
@@ -24,7 +24,7 @@ Every file in `docs/` and `imgs/` follows a `YYMMDD-slug` pattern: a 6-digit dat
 
 - `docs/` — article Markdown files (see "Filename conventions").
 - `imgs/` — article images (see "Filename conventions").
-- `README.md` — bilingual index, edited by hand. Keep it in sync whenever articles are added, moved, or removed. **Only add a row for an article that is committed (or committed in the same change). Never add a row for an untracked, work-in-progress draft** — a row pointing to an uncommitted file renders a broken link.
+- `README.md` — index, edited by hand. Keep it in sync whenever articles are added, moved, or removed. **Only add a row for an article that is committed (or committed in the same change). Never add a row for an untracked, work-in-progress draft** — a row pointing to an uncommitted file renders a broken link.
 
 ## Conventions
 
