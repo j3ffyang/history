@@ -1,5 +1,7 @@
 # 为什么会喜欢红楼梦
 
+> 繁体版：[为什么会喜欢红楼梦](https://github.com/j3ffyang/history/blob/main/docs/260908-why-love-hlm-zh-hant.md)
+
 说明 (disclaimer)：
 - 这部著作无法用一篇文章概括
 - 从个人角度，记录一些凌乱的观点，分享部分体会，不分主次

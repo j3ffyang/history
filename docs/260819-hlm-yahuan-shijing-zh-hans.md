@@ -1,5 +1,7 @@
 # 红楼梦里丫鬟的名字，那些和诗经、古诗有关？
 
+> 繁体版：[红楼梦里丫鬟的名字，那些和诗经、古诗有关？](https://github.com/j3ffyang/history/blob/main/docs/260819-hlm-yahuan-shijing-zh-hant.md)
+
 曹雪芹在《红楼梦》中为丫鬟取名，往往暗藏玄机，或出自《诗经》，或引自唐宋诗词，或取谐音寓意，既增添文学意蕴，也暗示人物命运。以下考释十八位丫鬟名字的诗词渊源。
 
 ![红楼梦丫鬟名字的诗词渊源信息图](../imgs/260819-hlm-yahuan-shijing-bento-aged-v3.png)

@@ -1,5 +1,7 @@
 # 晴雯
 
+> 繁体版：[晴雯](https://github.com/j3ffyang/history/blob/main/docs/260912-qingwen-zh-hant.md)
+
 ![晴雯](../imgs/260912-qingwen-infographic.png)
 
 《红楼梦》里第一个出现在判词中的人物，是晴雯。第五回，贾宝玉梦入太虚幻境，翻开金陵十二钗又副册，看到的头一首判词，写的就是她——那时她还没在书中正式登场，命运却已经写定。

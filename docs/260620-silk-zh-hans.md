@@ -1,5 +1,7 @@
 # 绫罗绸缎：丝线上的文明密码
 
+> 繁体版：[绫罗绸缎：丝线上的文明密码](https://github.com/j3ffyang/history/blob/main/docs/260620-silk-zh-hant.md)
+
 - 所有内容均为原创，包括 [SKILL.md](https://clawhub.ai/j3ffyang/260620-silk-essay-chn)
 - 本文的使用协作的 Hermes Agent SKILL.md > https://clawhub.ai/j3ffyang/260620-silk-essay-chn
 
