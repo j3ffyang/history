@@ -1,8 +1,8 @@
 # 校勘与引证说明（Corrections by Citation）
 
 > 校勘日期：2026-08-08（260808）
-> 校勘范围：`docs/260604-five-dynasties-ten-kingdoms-article.md`、`docs/260620-silk-chn.md`、`docs/260629-luoshenfu-literary-analysis.md`、`docs/260723-whoszhiyanzhai.md` 四篇。
-> 未改动：`docs/260804-linhuiyin.md`。
+> 校勘范围：`docs/260604-five-dynasties-ten-kingdoms-article-zh-hans.md`、`docs/260620-silk-zh-hans.md`、`docs/260629-luoshenfu-literary-analysis-zh-hans.md`、`docs/260723-whoszhiyanzhai-zh-hans.md` 四篇。
+> 未改动：`docs/260804-linhuiyin-zh-hans.md`。
 >
 > **校勘方法**：每条改动或存疑，均与至少两个独立来源交叉核对。可信来源优先级：
 > ① 古籍原文（维基文库所收《昭明文选》《旧五代史》《宋史》《人间词话》等影印/点校本）；
@@ -310,4 +310,4 @@
 
 ---
 
-*本文档与正文四篇（260604 / 260620 / 260629 / 260723）的修订同步；`260804-linhuiyin.md` 未改动。*
+*本文档与正文四篇（260604 / 260620 / 260629 / 260723）的修订同步；`260804-linhuiyin-zh-hans.md` 未改动。*
