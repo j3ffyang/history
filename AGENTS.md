@@ -15,14 +15,14 @@ The universal working rules (approval before changes, commit only when asked, ho
 
 Every file in `docs/` and `imgs/` follows a `YYMMDD-slug` pattern: a 6-digit date (`YYMMDD`, no `HHMM`, no `YYYY-MM-DD`), a hyphen, then a lowercase slug. No spaces.
 
-- **Articles** — `docs/<YYMMDD>-<slug>.md`, e.g. `260604-five-dynasties-ten-kingdoms-article.md`.
+- **Articles** — `docs/<YYMMDD>-<slug>.md`, e.g. `260604-five-dynasties-ten-kingdoms-article-zh-hans.md`.
 - **Images** — `imgs/<YYMMDD>-<slug>.<ext>`; images for an article share the article's `YYMMDD` prefix.
 - **Screenshots / captures with no meaningful name** — keep the capture time as the slug, e.g. `260604-074056.png`.
 - **Renaming** — when a file is renamed, update every `../imgs/<file>` and doc link that referenced the old name.
 
 ## Repository layout
 
-- `docs/` — article Markdown files (see "Filename conventions").
+- `docs/` — article Markdown files and `YYMMDD-corrections-by-citation.md` **only** (see "Filename conventions"). No notes, skeletons, or scratch files: unpublished working material does not live in the repo tree.
 - `imgs/` — article images (see "Filename conventions").
 - `README.md` — index, edited by hand. Keep it in sync whenever articles are added, moved, or removed. **Only add a row for an article that is committed (or committed in the same change). Never add a row for an untracked, work-in-progress draft** — a row pointing to an uncommitted file renders a broken link.
 
