@@ -107,6 +107,23 @@ A recognized article type: take one object from the primary text (a medicine, ga
 - Trace it outward in rings — 物 → 人物 → 家族 → 时代/国 — each ring anchored to a verifiable textual detail.
 - Frame the outermost ring as a reader's interpretation (attributed to a named school/scholar), cite the work's own boundary statements, and pair the object with an echo elsewhere (草蛇灰线).
 
+### 体例：原文引文块 + 多注 (house style)
+
+Close-reading articles read best when each section leads with the primary text. A format the author likes:
+
+- **Quote first, then read.** Open each section with a **blockquote of the original passage** (1–3 per section), then the reading; keep other quotations inline.
+- **多注.** Gloss colour names, garments and objects at **first occurrence** in parentheses (e.g. `石青（近乎黑的深蓝）`); gloss each term once.
+- **Never gloss inside a verbatim quote** (see item 17) — put the gloss outside the closing quote.
+- **"注" ≠ length.** 多注 vs 少注 is about *how many annotations*, not how long the piece is: a long essay can be 少注, a short one 多注. Set the density by the target reader, not the word count.
+- **Rare characters** (e.g. 䰖, 羓) — add a common rendering so they don't show as missing-glyph boxes.
+
+### 色词 / 服饰考释 (colour & garment terms)
+
+- **Where to verify 传统色名**: 中国丝绸博物馆「乾隆色谱」(reconstructed from the 乾隆 weaving-bureau dye records — 蓝八色、黄五色、红四色、紫五色、绿六色…; `chinasilkmuseum.com`); 汉典 `zdic.net` (词义 / 釉色); 故宫博物院 `dpm.org.cn`; referenced 维基百科 colour entries. **不采** 知乎 / 百度百科 / 博客.
+- **Gloss vs claim.** A reader-help gloss ("蜜合色≈浅黄白") is editorial — **no citation needed**. A statement *about* a colour's status or use ("石青是清代官服主色") is a **claim** — cite it, or mark 待核实.
+- **Widely-cited ≠ verifiable.** 清·李斗《扬州画舫录》"浅黄白色曰蜜合" is quoted everywhere for 蜜合色, but the book is **not on 维基文库** — without checking the text itself, mark 待核实. 传统色名 are fuzzy; some (e.g.「靠色」) have no reliable definition — don't invent one.
+- **《红楼梦》colour fact-checks**: 第五十回 reads 仇十洲《**双艳图**》, not「艳雪图」; 黛玉 is **not** "通篇不写衣饰" (第八回、第四十九回 both have real outfit descriptions) — avoid absolutes; reading a person's colour as a "code" is a *reader's interpretation* — label it.
+
 ## Repo conventions
 
 See `AGENTS.md` — filenames `docs/<YYMMDD>-<slug>.md`, images `imgs/<YYMMDD>-<slug>.<ext>` referenced as `../imgs/<file>`, README kept in sync, no nested `.git`, corrections doc only when there is something to record.
@@ -122,6 +139,7 @@ See `AGENTS.md` — filenames `docs/<YYMMDD>-<slug>.md`, images `imgs/<YYMMDD>-<
 - [ ] No untrusted-source claim used as evidence; unverifiable items in the corrections doc.
 - [ ] Pinyin verified and outside verbatim quotes; Simplified-only sweep done; quotes unaltered.
 - [ ] 回数/版本 consistent; popular-interpreter views attributed, personal impressions labelled.
+- [ ] Close-reading 体例: each section opens with a blockquote of the original; colour/garment terms glossed at first use, never inside a quote.
 - [ ] Filename `YYMMDD-slug`; images `../imgs/`; README in sync; stated word count matches actual CJK count (`python3 -c "import re;print(len(re.findall(r'[\u4e00-\u9fff]',open('FILE').read())))"`).
 - [ ] Nothing committed unless the user explicitly asks.
 
