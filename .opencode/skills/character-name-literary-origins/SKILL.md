@@ -36,7 +36,7 @@ This skill complements `chinese-history-literature-culture` (general Chinese lit
   - `create` — turn a character list + rough notes into a full name-source article.
   - `polish` — improve an existing draft (grammar, flow, clarity, style) while preserving structure and voice.
   - `cite` — add/verify citations for an existing article (may combine with polish).
-  - Default: follow whatever the user asked; ask if unclear.
+  - Default: follow what the user asked. Ask if unclear.
 - `author_work` — the literary work being analyzed (e.g.《红楼梦》《三国演义》《金瓶梅》).
 - `audience` / `tone` — optional. Default: general literate audience interested in classical Chinese literature.
 
@@ -68,7 +68,7 @@ For each character's name-source attribution:
 6. **Search the web** for the name's origin. Prefer site-restricted queries against trusted domains: `site:zh.wikisource.org 诗经 月出`, `site:ctext.org 蜀道难`.
 7. **Cross-check with at least two independent sources** for contested attributions. When sources disagree, record the discrepancy in the corrections doc.
 8. **Prefer primary text over commentary.** Quote from the primary text (Wikisource, 中华书局点校本) and verify exact wording and chapter/回目 number.
-9. **Verify chapter/回目 attributions against the original text**, not memory: e.g. for《红楼梦》check 回目 against the novel; for《诗经》check poem titles against《毛诗正义》.
+9. **Verify chapter/回目 attributions against the original text**, not memory: e.g. for《红楼梦》check 回目 against the novel. For《诗经》check poem titles against《毛诗正义》.
 9a. **Know when one source suffices.** Well-established facts (a poem's exact wording in Wikisource, a chapter number) need only one verified source. Reserve ≥2 sources for contested claims and interpretive assertions.
 
 ### Phase 3 — Source verification (verify the truth)
@@ -76,7 +76,7 @@ For each character's name-source attribution:
 10. **Open each source and locate the exact passage.** Fetch the page and confirm the specific sentence appears there verbatim or in substance. If you cannot retrieve the full content, you may not cite it — put it in 待核实.
 11. **Match claim ↔ source one-to-one.** Pair every fact with the exact sentence(s) that support it. If a source does not actually say what the draft claims, drop that source or fix the claim.
 12. **Check source independence.** Two sources that copy one another count as ONE source. Look for genuinely independent origins — a primary text, an academic paper, an official institution.
-13. **Watch for ghost citations.** A citation is suspicious if: the title looks plausible but no copy exists; the quoted sentence cannot be found; or search returns only secondary mentions. AI-generated and memory-invented citations must be detected and removed.
+13. **Watch for ghost citations.** A citation is suspicious in three cases. The title looks plausible but no copy exists. The quoted sentence cannot be found. Search returns only secondary mentions. AI-generated and memory-invented citations must be detected and removed.
 
 ### Phase 4 — Write / polish
 
@@ -123,7 +123,7 @@ For each character's name-source attribution:
 
 ### Phase 6 — Corrections doc (conditional)
 
-25. Quality control is the goal; the corrections doc is only the evidence. If every claim verifies, **no corrections doc is created**.
+25. Quality control is the goal. The corrections doc is only the evidence. If every claim verifies, **no corrections doc is created**.
 26. Anything unverifiable or contradictory goes into `docs/YYMMDD-corrections-by-citation.md`. Structure per `docs/260808-corrections-by-citation.md`: 校核总表, 已修正逐条明细, 待核实清单, 引用来源清单.
 27. If the article already has a corrections doc, append to it.
 
@@ -147,20 +147,20 @@ After the article is complete, verify every citation:
 
 - [ ] **Phase 1**: User's character list and ordering preserved — same characters, same sequence.
 - [ ] **Phase 2**: Every name-source attribution has ≥2 independent reliable sources (or 1 for well-established primary-text facts).
-- [ ] **Phase 3**: Every cited source was actually opened and the supporting sentence was located; no ghost citations.
-- [ ] **Phase 4**: Each entry contains all three mandatory elements (背景, 链接, 赏析); no fact stated twice within the same entry.
+- [ ] **Phase 3**: Every cited source was actually opened. The supporting sentence was located. No ghost citations.
+- [ ] **Phase 4**: Each entry contains all three mandatory elements (背景, 链接, 赏析). No fact is stated twice within the same entry.
 - [ ] **Phase 5**: 结语 covers every entry in the article.
 - [ ] **Phase 7**: Post-writing citation audit completed — every quote verified, exact wording confirmed, attributions checked.
 - [ ] No claim from untrusted sources treated as evidence.
 - [ ] Unverifiable items in corrections doc under "待核实", not asserted in the article.
 - [ ] Uncommon characters annotated with pinyin on first use.
-- [ ] Filename follows `YYMMDD-slug`; images referenced as `../imgs/<file>`; README in sync.
+- [ ] Filename follows `YYMMDD-slug`. Images are referenced as `../imgs/<file>`. README is in sync.
 - [ ] Nothing committed unless the user explicitly asks.
 
 ## Error handling
 
-- **User's attribution conflicts with reliable sources**: show the discrepancy and both sides' evidence; propose the fix; wait for approval.
-- **Sources conflict**: record both versions in the corrections doc under "待核实"; present the conflict to the user.
+- **User's attribution conflicts with reliable sources**: show the discrepancy and both sides' evidence. Propose the fix. Wait for approval.
+- **Sources conflict**: record both versions in the corrections doc under "待核实". Present the conflict to the user.
 - **Source is paywalled / unavailable**: rely on the other independent source and note the gap.
-- **Character has no known literary source**: state this explicitly in the entry (e.g. "此名未见直接典籍出处"); do not fabricate an attribution.
-- **Article is too long**: ask the user which characters to trim; do not silently cut content.
+- **Character has no known literary source**: state this explicitly in the entry (e.g. "此名未见直接典籍出处"). Do not fabricate an attribution.
+- **Article is too long**: ask the user which characters to trim. Do not silently cut content.
