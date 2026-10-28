@@ -23,7 +23,7 @@ Every file in `docs/` and `imgs/` follows a `YYMMDD-slug` pattern: a 6-digit dat
 
 ## Repository layout
 
-- `docs/` — article Markdown files and `YYMMDD-corrections-by-citation.md` (see "Filename conventions"). Unpublished drafts (writing skeletons, outlines, work-in-progress articles) may live here while they are untracked. Commit only finished articles and corrections docs; never commit a draft or skeleton unless the user names it. Scratch files that are not drafts (temporary output, backups) do not belong in `docs/`.
+- `docs/` — article Markdown files and `YYMMDD-corrections-by-citation.md` (see "Filename conventions"). Unpublished drafts (writing skeletons, outlines, work-in-progress articles) may live here while they are untracked. Write a draft directly to its final filename; do not add a `-draft` suffix. Untracked status already marks a file as a draft. Commit only finished articles and corrections docs; never commit a draft or skeleton unless the user names it. Scratch files that are not drafts (temporary output, backups) do not belong in `docs/`.
 - `imgs/` — article images (see "Filename conventions").
 - `README.md` — index, edited by hand. Keep it in sync whenever articles are added, moved, or removed. **Only add a row for an article that is committed (or committed in the same change). Never add a row for an untracked, work-in-progress draft** — a row pointing to an uncommitted file renders a broken link.
 
