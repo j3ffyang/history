@@ -33,7 +33,9 @@ Write, polish, and cite Chinese articles about Chinese history, literature, and 
 
 **Trusted:** Wikisource (维基文库) primary texts; official academic institutions and museums (kaogu.cn, cssn.cn, 故宫博物院 dpm.org.cn, 中国丝绸博物馆 chinasilkmuseum.com, 国家图书馆, university presses); reference dictionaries (汉典 zdic.net); academic presses & canonical editions (中华书局, 上海古籍, 人民文学, 商务印书馆); referenced Wikipedia entries; peer-reviewed journals / CNKI.
 
-**NOT trusted** (never evidence): 微博 / WeChat / 头条 / 抖音 / TikTok / 哔哩哔哩 / personal blogs / 百度百科 无参考文献词条 / forum posts / AI outputs.
+**NOT trusted** (never evidence): 微博 / WeChat / 头条 / 抖音 / TikTok / 哔哩哔哩 / 澎湃新闻 The Paper / 光明网 gmw.cn / personal blogs / 百度百科 无参考文献词条 / forum posts / AI outputs.
+
+**Site-level ban, not topic-level** — 澎湃 / 光明网 are blocked on these repos for every topic and every article. They may be read as leads (they often quote a real book's pages), but a claim backed only by them is **待核实**. Chase the underlying primary text or academic edition instead: for 《红楼梦》 variant readings, the Wikisource scans of 程甲本 / 程乙本 / 甲戌本 / 庚辰本 quote-verify the reading directly, which beats any commentary about it. Standing instruction from the user, 2026-10-28.
 
 ## Workflow
 
@@ -115,6 +117,7 @@ A recognized article type: take one object from the primary text (a medicine, ga
 Close-reading articles read best when each section leads with the primary text. A format the user likes:
 
 - **Quote first, then read.** Open each section with a **blockquote of the original passage** (1–3 per section), then the reading. Keep other quotations inline.
+- **脂批 in its own block.** Quote a 脂批 in a separate blockquote, placed after the original passage it comments on. Never put it in the same blockquote as the original text. Label it `脂批（edition，夹批/眉批/侧批，chapter）：…`.
 - **多注.** Gloss colour names, garments and objects at **first occurrence** in parentheses (e.g. `石青（近乎黑的深蓝）`). Gloss each term once.
 - **Never gloss inside a verbatim quote** — put the gloss outside the closing quote (canonical rule: Phase 4 item 17).
 - **"注" ≠ length.** 多注 vs 少注 is about *how many annotations*, not how long the piece is: a long essay can be 少注, a short one 多注. Set the density by the target reader, not the word count.
