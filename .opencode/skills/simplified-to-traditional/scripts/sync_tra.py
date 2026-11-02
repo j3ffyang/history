@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Sync a Simplified-Chinese history article to its Traditional-Chinese twin.
+"""Sync a Simplified-Chinese article to its Traditional-Chinese twin.
+The same file is used by both history and ai-thoughts (keep them byte-identical).
 
-Source of truth : docs/<YYMMDD-slug>-zh-hans.md   (or a bare docs/<YYMMDD-slug>.md)
+Source of truth : docs/<YYMMDD-slug>-zh-hans.md   (bare .md is English in ai-thoughts)
 Generated twin  : docs/<YYMMDD-slug>-zh-hant.md
 
 What it does:
@@ -21,7 +22,11 @@ import subprocess
 import sys
 from pathlib import Path
 
-GITHUB = "https://github.com/j3ffyang/history/blob/main/docs/"
+def github_base(src: Path) -> str:
+    """j3ffyang/<repo>/blob/main/docs/ — docs/ sits at the repo root, so the
+    repo name is the parent directory of src's directory. Covers ai-thoughts
+    and history without hardcoding either."""
+    return f"https://github.com/j3ffyang/{src.resolve().parent.parent.name}/blob/main/docs/"
 LINK_RE = re.compile(r"^>\s*(?:繁體版|簡體版|繁体版|简体版)\s*[：:]")
 H1_RE = re.compile(r"^#\s+(\S.*\S|\S)\s*$")
 OPENCC = ["opencc", "-c", "s2twp.json"]
@@ -30,36 +35,52 @@ OPENCC = ["opencc", "-c", "s2twp.json"]
 # between occurrences. Each (from, to) pair is applied in order to the converted
 # Traditional text. Keep this list small and specific; it survives every re-sync.
 OVERRIDES = [
-    ("嵇喜來吊", "嵇喜來弔"),  # 弔 = mourn (OpenCC left 吊 in the 晉書 quotation)
-    ("注莊", "註莊"),          # 註 = annotate (Taiwan standard); OpenCC mixed 注/註
+    ("嵇喜來吊", "嵇喜來弔"),
+    ("注莊", "註莊"),
     ("舊注", "舊註"),
     ("未注完", "未註完"),
     ("注《莊子》", "註《莊子》"),
-    ("作者自雲", "作者自云"),  # 云 = "says" (作者自云), not 雲 "cloud"
-    ("幹血之症", "乾血之症"),  # 乾 = dry (干血 = dry blood, a TCM condition); OpenCC picked 幹
-    ("亂鬨鬨", "亂哄哄"),      # match the quoted edition's 哄 (解注「亂哄哄你方唱罷我登場」)
-    ("揹著", "背著"),          # match the quoted edition's 背 (走罷句「搶了過來背著」)
-    ("都雲作者痴", "都云作者痴"),     # 云 = "says" (紅樓夢題詩「都云作者痴」)
-    ("又自雲", "又自云"),             # 云 = "says" (作者又自云)
-    ("若雲必因", "若云必因"),         # 云 = "says" (若云必因晴雯誄)
-    ("空雲似桂如蘭", "空云似桂如蘭"), # 云 = "says" (襲人判詞「空云似桂如蘭」)
-    ("哭幹了眼淚", "哭乾了眼淚"),     # 乾 = dry (哭乾了眼淚)
-    ("曬幹研末", "曬乾研末"),         # 乾 = dry (曬乾研末)
-    ("生髮出", "生發出"),             # 發 = develop (由此生發出)
-    # 261007-hlm-color: restore the cited 脂本/程乙本 forms inside verbatim quotes.
-    ("掛珠釵", "挂珠釵"),                       # 第三回「朝陽五鳳挂珠釵」
-    ("裙邊繫著豆綠宮絛", "裙邊系著豆綠宮絛"),   # 第三回「裙邊系著」
-    ("片金裡大紅猩猩氈", "片金里大紅猩猩氈"),   # 第四十九回「片金里」
-    ("他裡頭穿著", "他里頭穿著"),               # 第四十九回「他里頭穿著」
-    ("裡面短短的一件水", "里面短短的一件水"),   # 第四十九回「里面短短的一件水」
-    ("腰裡緊緊束著", "腰里緊緊束著"),           # 第四十九回「腰里緊緊束著」
-    ("並無避雪之衣", "并無避雪之衣"),           # 第四十九回「并無避雪之衣」
-    ("簪於鬢上", "簪于鬢上"),                   # 第四十回「簪于鬢上」
-    ("拖在泥裡", "拖在泥里"),                   # 第六十二回「拖在泥里」
-    ("花甕一甕", "花瓮一瓮"),                   # 第四十一回「花瓮一瓮」
-    ("總捨不得吃", "總舍不得吃"),               # 第四十一回「總舍不得吃」
-    ("高階織法", "高級織法"),                   # 高級 = high-grade, not 高階
-    ("么四", "幺四"),                           # 第四十回「幺四」
+    ("作者自雲", "作者自云"),
+    ("幹血之症", "乾血之症"),
+    ("亂鬨鬨", "亂哄哄"),
+    ("揹著", "背著"),
+    ("都雲作者痴", "都云作者痴"),
+    ("又自雲", "又自云"),
+    ("若雲必因", "若云必因"),
+    ("空雲似桂如蘭", "空云似桂如蘭"),
+    ("哭幹了眼淚", "哭乾了眼淚"),
+    ("曬幹研末", "曬乾研末"),
+    ("生髮出", "生發出"),
+    ("掛珠釵", "挂珠釵"),
+    ("裙邊繫著豆綠宮絛", "裙邊系著豆綠宮絛"),
+    ("片金裡大紅猩猩氈", "片金里大紅猩猩氈"),
+    ("他裡頭穿著", "他里頭穿著"),
+    ("裡面短短的一件水", "里面短短的一件水"),
+    ("腰裡緊緊束著", "腰里緊緊束著"),
+    ("並無避雪之衣", "并無避雪之衣"),
+    ("簪於鬢上", "簪于鬢上"),
+    ("拖在泥裡", "拖在泥里"),
+    ("花甕一甕", "花瓮一瓮"),
+    ("總捨不得吃", "總舍不得吃"),
+    ("高階織法", "高級織法"),
+    ("么四", "幺四"),
+    ("曬幹", "曬乾"),
+    ("制醋柴胡", "製醋柴胡"),
+    ("剋制", "克制"),
+    ("方里", "方裡"),
+    ("寫明瞭", "寫明了"),
+    ("醋制", "醋製"),
+    ("里加", "裡加"),  # ai-thoughts: 里 = "inside" (…里加), not the unit 里 after Latin text
+    ("幹淨", "乾淨"),  # ai-thoughts: 干 = dry/clean (干净), not 幹
+    ("可擴充套件性", "可擴充性"),  # ai-thoughts: 拡展性 → 擴充性; s2twp leaks 套件
+    ("介面連線", "介面連接"),  # ai-thoughts: 连接 = "connected by", not 連線
+    ("介面與實現", "介面與實作"),  # ai-thoughts: 实现 = implementation → 實作
+    ("沒有隻向", "沒有只向"),  # ai-thoughts: 只 = "only", not the classifier 隻
+    ("還是隻看到", "還是只看到"),  # ai-thoughts: 只 = "only" (還是只看到), not 隻
+    ("餘則深知", "余則深知"),
+    ("餘閱", "余閱"),
+    ("薛姨媽雲", "薛姨媽云"),
+    ("麵皮", "面皮"),
 ]
 
 # One-Simplified-to-many-Traditional forms where OpenCC can pick the wrong
@@ -136,9 +157,7 @@ def twin_path(src: Path) -> Path:
     name = src.name
     if name.endswith("-zh-hans.md"):
         return src.with_name(name[: -len("-zh-hans.md")] + "-zh-hant.md")
-    if name.endswith(".md"):
-        return src.with_name(name[:-3] + "-zh-hant.md")
-    sys.exit(f"unrecognized source filename: {name}")
+    sys.exit(f"unrecognized source filename: {name} (expected <YYMMDD-slug>-zh-hans.md)")
 
 
 def build(src: Path) -> tuple[str, str, Path, str]:
@@ -147,13 +166,14 @@ def build(src: Path) -> tuple[str, str, Path, str]:
     twin = twin_path(src)
 
     src_title = h1_title(src_text)
-    src_link = f"> 繁体版：[{src_title}]({GITHUB}{twin.name})"
+    base = github_base(src)
+    src_link = f"> 繁体版：[{src_title}]({base}{twin.name})"
     src_out = with_link(src_text, src_link)
 
     body = strip_link_lines(src_text)
     tra_body = apply_overrides(to_traditional(body))
     tra_title = h1_title(tra_body)
-    tra_link = f"> 簡體版：[{tra_title}]({GITHUB}{src.name})"
+    tra_link = f"> 簡體版：[{tra_title}]({base}{src.name})"
     twin_out = with_link(tra_body, tra_link)
 
     return src_text, src_out, twin, twin_out
